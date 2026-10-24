@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Biodata Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <p class="eyebrow">STUDENT INFORMATION</p>
+        <h1>Student Biodata Form</h1>
+      </header>
+
+      <form id="biodataForm" class="form-card" novalidate>
+        <div class="form-layout">
+          <div class="fields">
+            <h2>Personal details</h2>
+            <div class="field-grid">
+              <label
+                >Full name
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  placeholder="Enter your full name"
+                  required
+              /></label>
+              <label
+                >Matriculation number
+                <input
+                  id="matricNumber"
+                  name="matricNumber"
+                  type="text"
+                  placeholder="Enter matric number"
+                  required
+              /></label>
+              <label
+                >Date of birth <input id="dob" name="dob" type="date" required
+              /></label>
+              <label
+                >Gender
+                <select id="gender" name="gender" required>
+                  <option value="">Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select></label
+              >
+              <label
+                >Email address
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="student@example.com"
+                  required
+              /></label>
+              <label
+                >Phone number
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Enter phone number"
+                  pattern="[0-9]+"
+                  required
+              /></label>
+              <label
+                >State of origin
+                <input
+                  id="state"
+                  name="state"
+                  type="text"
+                  placeholder="Enter state of origin"
+                  required
+              /></label>
+              <label
+                >Nationality
+                <input
+                  id="nationality"
+                  name="nationality"
+                  type="text"
+                  placeholder="Enter nationality"
+                  required
+              /></label>
+            </div>
+            <label class="full-width"
+              >Residential address
+              <textarea
+                id="address"
+                name="address"
+                rows="3"
+                placeholder="Enter residential address"
+                required
+              ></textarea>
+            </label>
+            <h2>Academic details</h2>
+            <div class="field-grid">
+              <label
+                >Institution
+                <input
+                  id="institution"
+                  name="institution"
+                  type="text"
+                  placeholder="Enter institution name"
+                  required
+              /></label>
+              <label
+                >Programme of study
+                <input
+                  id="programme"
+                  name="programme"
+                  type="text"
+                  placeholder="Enter course / programme"
+                  required
+              /></label>
+              <label
+                >Academic level
+                <select id="level" name="level" required>
+                  <option value="">Select level</option>
+                  <option>100 Level</option>
+                  <option>200 Level</option>
+                  <option>300 Level</option>
+                  <option>400 Level</option>
+                  <option>500 Level</option>
+                  <option>Postgraduate</option>
+                </select></label
+              >
+              <label
+                >Department
+                <input
+                  id="department"
+                  name="department"
+                  type="text"
+                  placeholder="Enter department"
+                  required
+              /></label>
+            </div>
+          </div>
+          <aside class="photo-area">
+            <h2>Passport photograph</h2>
+            <div class="passport-shell">
+              <iframe
+                id="passportFrame"
+                src="passport.html"
+                title="Embedded passport photograph"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <label for="photoInput" class="upload-label"
+              >Choose passport photo</label
+            >
+            <input
+              id="photoInput"
+              type="file"
+              accept="image/png,image/jpeg,image/webp"
+            />
+          </aside>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Preview Biodata</button>
+          <button type="reset" class="secondary">Clear form</button>
+        </div>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+      <section id="preview" class="preview-card" hidden aria-live="polite">
+        <h2>Biodata preview</h2>
+        <div id="previewContent" class="preview-grid"></div>
+      </section>
+      <footer><p>Student Biodata • HTML, CSS & JavaScript project</p></footer>
+    </main>
+  </body>
+</html>
